@@ -77,16 +77,8 @@ namespace holoutils
                 DateTime now = DateTime.Now;
                 String name = "Null";
                 String date = now.ToString();
-                GameObject[] active = GameObject.FindGameObjectsWithTag("Layer");
-                for (int i = 0; i < active.Length; i++)
-                {
-                    if (active[i].activeInHierarchy == true)
-                    {
-                        name = active[i].name;
-                    }
-                }
-                if (name != "MainInterface")
-                {
+
+
                     row.Add(date);
                     row.Add(name);
                     String camx = camera.x.ToString();
@@ -123,7 +115,7 @@ namespace holoutils
                     FlushData();
                     //EndCSV();
                 }
-            }
+            
 
 
         }
